@@ -43,8 +43,8 @@ def get_chromedriver_version():
     if match:
         return match.group(1)
     else:
-        raise Exception('Unable to get latest chromedriver version from {0}'
-                        .format(CHROMEDRIVER_INFO_URL))
+        msg = f'Unable to get latest chromedriver version from {CHROMEDRIVER_INFO_URL}: found {content}"
+        raise Exception(msg)
 
 
 class BuildScripts(build_scripts):
