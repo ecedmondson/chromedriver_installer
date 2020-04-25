@@ -215,7 +215,7 @@ setup(
     license='MIT',
     package_data={'': ['*.txt', '*.rst']},
     # If packages is empty, contents of ./build/lib will not be copied!
-    packages=['manage_cd'],
+    packages=['chromedriver_installer'],
     scripts=['if', 'empty', 'BuildScripts', 'will', 'be', 'ignored'],
     cmdclass=dict(build_scripts=BuildScripts, install=Install)
 )
