@@ -199,7 +199,7 @@ setup(
     long_description=open(os.path.join(os.path.dirname(__file__), 'README.rst'))
         .read(),
     keywords='chromedriver installer',
-    url='https://github.com/peterhudec/chromedriver_installer',
+    url='https://github.com/ecedmondson/chromedriver_installer',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
@@ -215,7 +215,7 @@ setup(
     license='MIT',
     package_data={'': ['*.txt', '*.rst']},
     # If packages is empty, contents of ./build/lib will not be copied!
-    packages=['chromedriver_installer'],
+    packages=['manage_cd'],
     scripts=['if', 'empty', 'BuildScripts', 'will', 'be', 'ignored'],
     cmdclass=dict(build_scripts=BuildScripts, install=Install)
 )
