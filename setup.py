@@ -116,7 +116,7 @@ class BuildScripts(build_scripts):
             if chromedriver_checksums:
                 validate = True
         else:
-            chromedriver_version = get_chromedriver_version()
+            chromedriver_version = "81.0.4044.69"
 
         file_name = 'chromedriver_{0}.zip'.format(chromedriver_version)
         zip_path = os.path.join(tempfile.gettempdir(), file_name)
