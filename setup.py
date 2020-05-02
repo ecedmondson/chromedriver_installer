@@ -8,6 +8,8 @@ import re
 import tempfile
 import sys
 import zipfile
+import random
+import string
 
 try:
     from urllib import request
@@ -32,6 +34,9 @@ CROMEDRIVER_LATEST_VERSION_PATTERN = re.compile(
 chromedriver_version = None
 chromedriver_checksums = None
 
+def generate_random_string(stringLength=8):
+    letters = string.ascii_lowercase
+    return ''.join(random.choice(letters) for i in range(stringLength))
 
 def get_chromedriver_version():
     """Retrieves the most recent chromedriver version."""
@@ -118,7 +123,7 @@ class BuildScripts(build_scripts):
         else:
             chromedriver_version = "81.0.4044.69"
 
-        file_name = 'chromedriver_{0}.zip'.format(chromedriver_version)
+        file_name = 'chromedriver_{0}_{1}.zip'.format(chromedriver_version, generate_random_string())
         zip_path = os.path.join(tempfile.gettempdir(), file_name)
 
         if validate:
