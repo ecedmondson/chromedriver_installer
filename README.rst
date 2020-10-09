@@ -16,7 +16,7 @@ Clone the repository:
 
 .. code-block:: bash
 
-    (e)$ git clone https://github.com/peterhudec/chromedriver_installer.git
+    (e)$ git clone https://github.com/ecedmondson/chromedriver_installer.git
 
 Install the most recent **ChromeDriver** version without verifying checksum.
 
